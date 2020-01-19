@@ -19,18 +19,18 @@ Rakefile will contain automated tasks for us
 `touch lib/models/<model-name>.rb`  
 ## Text Editor  
 8. Establish the connection in config/environment.rb using the following code:  
-`require "bundler/setup"
-Bundler.require()
-
-require_all "lib"
-
-ActiveRecord::Base.establish_connection({
-    adapter: "sqlite3",
-    database: "flatiron.db"
+`require "bundler/setup"  
+Bundler.require()  
+  
+require_all "lib"  
+  
+ActiveRecord::Base.establish_connection({  
+    adapter: "sqlite3",  
+    database: "flatiron.db"  
 })`  
 environment is now done.  
 9. Go to Rakefile  
-`require_relative "config/environment"
+`require_relative "config/environment"  
 require "sinatra/activerecord/rake"`  
 If you run `rake -T` in the Command Line, it will show you the rake tasks.  
 ## Command Line  
@@ -39,10 +39,10 @@ If you run `rake -T` in the Command Line, it will show you the rake tasks.
 This creates a folder 'db' and a subfolder 'migrate', and the migration inside of it.  
 ## Migration File you just created  
 11. In the change method, create a table:  
-`create_table(:table_name) { |t|
-    t.string :name
-    t.integer :age
-    t.boolean :current_student
+`create_table(:table_name) { |t|  
+    t.string :name  
+    t.integer :age  
+    t.boolean :current_student  
 }`  
 This is simply describing the column names and types for SQL.  
 ## Command Line  
@@ -54,5 +54,5 @@ Supposed to work. Instead we need to use yaml file.  The establish connection me
 This .yml file is to be created in the config folder and does the same thing as the establish connection method.   
 ## Text Editor  
 In student.rb add:  
-`class Student < ActiveRecord::Base
+`class Student < ActiveRecord::Base  
 end`  
