@@ -5,7 +5,7 @@
 `bundle init`  
 2. generate a Gemfile  
 `bundle add <gem1> <gem2>`  
-in this case we used `sinatra-activerecord activerecord rake sqlite3 require_all`  
+in this case we used `sinatra-activerecord activerecord rake sqlite3 require_all pry`  
 This generates the Gemfile.lock file. Should be all set on gems (maybe include pry?)  
 3. `mkdir config lib`  
 this will make 2 new folders  
